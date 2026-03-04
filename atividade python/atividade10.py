@@ -3,19 +3,19 @@ menor = float()
 soma = 0 
 acima_15 = 0
 for cont in range(10):
-    temperatura = float(input(f"digite a {cont + 1} temperatura: "))
-    soma += temperatura
+    amper = float(input(f"digite o {cont + 1} amper: "))
+    soma += amper
     if cont == 0:
-        maior = temperatura
-        menor = temperatura
-    if temperatura > 100:
-        acima_100 += 1
-        if temperatura > maior:
-            maior = temperatura
-        if temperatura < menor:
-            menor = temperatura
+        maior = amper
+        menor = amper
+    if amper > 15:
+        acima_15 += 1
+        if amper > maior:
+            maior = amper
+        if amper < menor:
+            menor = amper
 media = soma / 10
-print(f"temperatura media: {media}")
-print(f"temperatura maior: {maior}")
-print(f"temperatura menor: {menor}")    
-print(f"quantidade de temperaturas acima de 100: {acima_100} vezes")
+print(f"Amper media: {media}")
+print(f"Amper maior: {maior}")
+print(f"Amper menor: {menor}")    
+print(f"quantidade de amperes acima de 15: {acima_15} vezes")
