@@ -1,15 +1,3 @@
-#Imagine que você é um desenvolvedor encarregado de criar um sistema de controle de acesso para uma empresa de coworking. O sistema deve funcionar da seguinte maneira:
-#Os membros têm acesso ilimitado durante o horário comercial (das 9h às 18h) de segunda a sexta-feira.
-#Visitantes têm acesso limitado a um período máximo de 4 horas dentro do horário comercial.
-#Durante o fim de semana (sábado e domingo), apenas os membros têm acesso ao espaço.
-#Elabore um programa em Python que:
-#A. Realize um print de boas-vindas que inclua o seu nome.
-#B. Solicite ao usuário que insira se é um membro ou visitante e, se for um visitante, o tempo de permanência desejado em horas (valor inteiro).
-#C. Calcule e retorne se o acesso é permitido ou não, com base nas regras mencionadas.
-#D. Utilize estruturas condicionais (if, elif, else) para implementar as diferentes condições de acesso.
-#E. Inclua comentários no código para explicar a lógica por trás de cada condição.
-#F. Apresente uma mensagem na saída de console indicando se o acesso foi permitido ou não, e, se não foi permitido, informe o motivo.
-# A. Print de boas-vindas
 tipo_usuario = 0
 tempo_permanencia = 0
 
@@ -23,6 +11,7 @@ if tipo_usuario == 'membro':
         print(f"Bem-vindo, membro! Você tem acesso ilimitado durante o horário comercial. Horário atual: {i}h")
         print("Aproveite seu tempo no coworking!")
 elif tipo_usuario == 'visitante':
+    #elif é utilizado para que o programa possa verificar se o tipo de usuário é 'visitante' se a condição anterior seja falsa
     tempo_permanencia = int(input("Digite o tempo de permanência desejado em horas (valor inteiro): "))
     #int() é utilizado para converter a entrada do usuário, que é uma string, em um valor inteiro, permitindo que o programa possa comparar o tempo de permanência com o limite de 4 horas.
     if tempo_permanencia <= 4:
